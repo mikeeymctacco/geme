@@ -1,11 +1,11 @@
-
+import random
 from colorama import Fore
+import time
+import os
 inventory = [] 
 a = 0
 c = 0
-s = 0
-import time
-import os
+s = 0 
 os.system('clear')
 print("Dungeon Master: Welcome to my Dungeon")
 #time.sleep(3)
@@ -19,6 +19,7 @@ else:
     print("THEN DIE")
 #    time.sleep(2)
     print("you feel your throat close and you die")
+    quit()
 print("You walk into a room and you see many bodies on the ground and some have weapons some have amulets")
 
 def AmorWe():
@@ -55,12 +56,39 @@ print("Old Woman: I've been expecting you")
 print("In this room you need to either use your magic or your sword")
 print("Or if you have nothing you may try to spare the monster")
 print("a monster drops from the celling")
-input("Fight? y/n")
-if "basic_sword" or "low_power_amulet" in inventory:
-    print("you attack the monster ")
+x = input("Fight? y/n ")
+if x == 'y':
+            if 'low_power_amulet' in inventory:
+                print("you attack the monster ")
     #time.sleep(1)
-    print("you damage the monster he looks very wounded")
-    print("he attacks what do you do")
+                print("you damage the monster he looks very wounded")
+                print("he attacks what do you do")
+                if 'basic_sword' in inventory:
+                    print("you damage the monster he looks very wounded")
+                    print("he attacks what do you do")
+                else:
+                    print("sorry you can't attack it")
+        else:
+            print("sorry you can't attack it")
+else:
+    print("sorry you can't attack it")
+import random
+import time
+
+lvl1 = [
+ 'dodge'
+]
+
+word = random.choice(lvl1)
+start_time = time.time()
+one = input("You have 3 seconds to type: {}\n".format(word))
+
+while time.time() - start_time > 3 or one != word:
+    print("Wrong!")
+    start_time = time.time()
+    one = input("You Die") 
+    break
+print("you protect yourself from death") 
 
 #everything past this comment needs to stay last
 while True:
