@@ -8,4 +8,4 @@ echo "Shopkeeper: The second is the middle class. (medium risk medium reward)"
 sleep 3
 echo "Shopkeeper: And the third is kill your self becase you are poor. (low risk crappy reward)"
 sleep 3
-read -p "Enter First Name: " choice
+read -p "Enter First Name: " fname
