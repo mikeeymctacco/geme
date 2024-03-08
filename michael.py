@@ -12,7 +12,7 @@ def michael():
     s = 0
     def inv():
         print(*inventory)
-        print(*gold)
+        print(gold)
     os.system("clear")
     def intro():
         global gold
@@ -27,7 +27,7 @@ def michael():
             gold -= 500
         else:
             print("THEN DIE")
-        #    time.sleep(2)
+            #time.sleep(2)
             print("you feel your throat close and you die")
             quit()
     intro()
@@ -48,6 +48,8 @@ def michael():
 
 
     def items():
+        global a
+        global s
         if a == 4:
                 inventory.append(str("low-power-amulet"))
                 print(f"{Fore.GREEN}You Aquired a low powered amulet{Fore.WHITE}")
@@ -65,17 +67,18 @@ def michael():
         #time.sleep(2)
         print("you get forced into the next room")
         print("the door slams behind you")
-        #time.sleep(1)
+        #time.sleep(2)
         print("Old Woman: I've been expecting you")
-        #time.sleep(1)
+        #time.sleep(3)
         print("In this room you need to either use your magic or your sword")
+        #time.sleep(4)
         print("Or if you have nothing you may try to spare the monster")
+        #time.sleep(3)
         print("a monster drops from the celling")
     cont()
     global x
     def fight():
-        x = input("Fight? y/n ")
-        if x == "y":
+        if input("Fight? y/n ") == "y":
             if "low-power-amulet" or "basic-sword" in str(*inventory):
                 print("you attack the monster ")
                 #time.sleep(1)
@@ -86,8 +89,6 @@ def michael():
         else:
                 print("sorry you can't attack it")
     fight()
-    import random
-    import time
 
     def options():
         global gold
@@ -130,4 +131,3 @@ def michael():
             inv()
         break
     #os.system("clear")
-#michael()

@@ -189,4 +189,3 @@ def dante():
             print(*inventory)
             break
     os.system('clear')
-#dante()
