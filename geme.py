@@ -88,6 +88,7 @@ def showStatus(): #status
 
   print('Inventory:')
   print(*inventory)
+  print(inventory)
   if "item" in rooms[stage][currentRoom]:
     print('You see a ' + rooms[stage][currentRoom]['item'])
   if "check" in rooms[stage][currentRoom]:
