@@ -18,7 +18,7 @@ print("Shopkeeper: And the third is kill your self becase you are poor. (low ris
 #time.sleep
 choose = int(input("Choose your quest high risk (1) medium risk (2) low risk (3) "))
 if choose == 1:
-    michael()
+    michael() #finish rm2
 elif choose == 2:
     dante()
 elif choose == 3:
