@@ -4,9 +4,13 @@ def dante():
     import time
     import os
     inventory = []
+    #steven code
+    def endd():
+     print("You put in your ear buds and start playing the avengers theme song as you walk out of the dungeon.")
+    #end steven code
     def smrm():
         print("Once you enter the door you see a small room with a chest and a door.")
-        #time.sleep(4)
+        time.sleep(4)
         usr2 = int(input("Would you like to open the chest (1) or continue without opening the chest (2)? "))
         if usr2 == 1:
             print(f"{Fore.GREEN}You have accuired a Strong Sword. {Fore.WHITE}")
@@ -16,9 +20,9 @@ def dante():
             print("You have entered the room without opening the chest.")
     os.system('clear')
     print("Dungeon Guardian: Welcome traveler!")
-    #time.sleep(3)
+    time.sleep(3)
     print("Dungeon Guardian: If you would like to enter this dungeon you will have to pay me 250 gold.")
-    #time.sleep(5)
+    time.sleep(5)
 
     global lvl1
     lvl1 = [
@@ -30,9 +34,9 @@ def dante():
         word = random.choice(lvl1)
         start_time = time.time()
         global one
-        one = input("You have 3 seconds to type: {}\n".format(word))
+        one = input("You have 5 seconds to type: {}\n".format(word))
 
-        while time.time() - start_time > 2 or one != word:
+        while time.time() - start_time > 5 or one != word:
             print("you try to dodge but")
             start_time = time.time()
             one = input("You Die") 
@@ -42,15 +46,15 @@ def dante():
         usr = input("Do you want to enter the door on the left, or the right? ").strip()
         if usr == "right":
             print("You enter a room with a big chest.")
-            #time.sleep(1)
+            time.sleep(1)
             usr3 = input("Do you open the chest? y/n ").strip()
             if usr3 == "y":
                 print(f"{Fore.GREEN}You have found a Long Sword and a key! {Fore.WHITE}")
-                #time.sleep(2)
+                time.sleep(2)
                 inventory.append(str('long_sword'))
                 inventory.append(str("key"))
                 print("I wonder what the key is for?")
-                #time.sleep(2)
+                time.sleep(2)
                 print("You then turn back and go to the other door.")
             else:
                 print("You ignore the chest and you turn back to go the other way.")
@@ -88,14 +92,14 @@ def dante():
         print(f"{Fore.RED}-250G {Fore.WHITE}")
     else:
         print("Dungeon Guardian: That's a shame")
-    #    time.sleep(2)
+        time.sleep(2)
         print("Dungeon Guardian: You can always come back another time.")
-    #    time.sleep(3)
+        time.sleep(3)
         print("You turn around and leave the dungeon.")
-    #    time.sleep(3)
+        time.sleep(3)
 
     print("When you enter the dungeon you find a small room with 4 doors on each side of the room.")
-    #time.sleep(4)
+    time.sleep(4)
         
     usr = input("Do you want to go to the door straight, left, or right? ").strip()
     if usr == "straight":
@@ -119,12 +123,12 @@ def dante():
 
     print("When you go through the door you see a small room with 2 doors on both sides of the room.")
     rm3()
-    #time.sleep(4)
+    time.sleep(4)
 
     print("After you get away from the monster and you look around and you see stairs that leed further down into the dungeon.")
-    #time.sleep(3)
+    time.sleep(3)
     print("Once you get down the stairs you see two doors.")
-    #time.sleep(2)
+    time.sleep(2)
     def rm4():
         x = input("Do you choose the door on the left or the door on the right? right/left ").strip()
         if x == "right":
@@ -150,7 +154,7 @@ def dante():
                 if "key" in inventory:
                     print("You already have a key so you don't need this key.")
                 else:
-                    print(f"{Fore.Green}You have accuired a a key! {Fore.WHITE}")
+                    print(f"{Fore.GREEN}You have accuired a a key! {Fore.WHITE}")
                     inventory.append(str('key'))
                     time.sleep(2)
                     print("Let's try the other door.")
@@ -181,39 +185,70 @@ def dante():
     dodge()
     
     print("Just after you dodged the monster you look back and a bunch of monsters start chasing you.")
-    #time.sleep(2)
+    time.sleep(2)
     print("You start runing as fast as you can.")
-    #time.sleep(1)
+    time.sleep(1)
     print("as you are running down the halls you come to a split in the hall.")
-    #time.sleep(2)
+    time.sleep(2)
 
     def dec():
         y = input("Do you go left or do you go right? ")
         if y == "l":
             print("You turn the corner and you trip on a wire that was on the ground and it activates a trap.")
-            #time.sleep(3)
+            time.sleep(3)
             print("The floor moves and a pit of spikes is bellow.")
-            #time.sleep(1)
+            time.sleep(1)
             death()
         else:
             print("You turn the corner and you see a door.")
-            #time.sleep(1)
+            time.sleep(1)
             print("You run up to the door and slam it oppen.")
-            #time.sleep(1)
+            time.sleep(1)
             print("You quickly turn around, slam the door closed.")
-            #time.sleep(1)
+            time.sleep(1)
             print("You reach in your pocket and grab your key, you then lock the door.")
-            #time.sleep(1)
+            time.sleep(1)
             print("Good job, you have escaped the monsters.")
             os.system('clear')
     dec()
 
-    print("After you catch your breath you look around and see a big door with a chest.")
-    #time.sleep(2)
+    print("After you catch your breath you look around and see a big door with a chest next to the door.")
+    time.sleep(2)
     def ch():
         t = input("Do you want to open the chest? y/n ")
         if t == "y":
-            print("")
+            print("You walk over to the chest and you open it.")
+            time.sleep(2)
+            print(f"{Fore.GREEN}You found a giant key! {Fore.WHITE}")
+        else:
+            print("You did not open the chest and now you feel like you are expanding.")
+            time.sleep(2)
+            print("You ignor it and start walking to the door.")
+            time.sleep(2)
+            print("As you touch the door you vilontly explode in to small pieces.")
+            death()
+    ch()
+    print("You start to insirt the giant key into the door.")
+    time.sleep(2)
+    print("You unlock the door and you push the door wide open.")
+    time.sleep(2)
+    print("As you walk into the final room a giant monster comes out from the shaddows.")
+    time.sleep(2)
+    print("???: Welcome to my home.")
+    time.sleep(1)
+    print("You charge towards the monster while pulling out your sword.")
+    time.sleep(2)
+    print("You swing as hard as you can and you make a big cut on his stomach.")
+    time.sleep(2)
+    print("???: Ouchie!")
+    time.sleep(1)
+    print("???: Here take this, just leave me alone!!")
+    print(f"{Fore.YELLOW}+1000G {Fore.WHITE}")
+    time.sleep(2)
+    print("The monster runs away and you leave the dungeon.")
+    time.sleep(2)
+    endd()
+
 
     #everything after this stays at the end
     while True:

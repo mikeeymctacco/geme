@@ -10,6 +10,13 @@ def michael():
     a = 0
     c = 0
     s = 0
+ 
+    #steven code
+    def endm():
+        print("you return to the town")
+        print("GM: Good job you have won")
+        print("GM: by the whay the moon lord was protekting the town")
+    #end steven code
     #room functions
     def smrm():
         global gold
@@ -104,7 +111,7 @@ def michael():
             print("you hear stone sliding across the ground")
             #time.sleep(2)
             print("you see a small light and you walk towards it")
-            rm5()
+            finalfight()
     def rm3():
         global gold
         os.system("clear")
@@ -122,7 +129,85 @@ def michael():
         elif usr2 == 2:
             print("you leave the room")
             rm4()
+    def finalfight():
+        print("Moon Lord: welcome child to your DOOM!")
+        if 'zennith' in inventory:
+            print("NO YOU WILL NOT BEAT ME WIH THAT WEAPON")
+            if 'zennith' not in inventory:
+                print("What a pitiful weapon you'll never be able to beat me")
+                print("he shoots you with his laser and you die")
+                quit()
+        options1 = [
+        'd'
+        ]
+        word = random.choices(options1)
+        startTime = time.time()
+        one = input("he shoots you with the laser  type: {}\n".format(*word))
+        #where the functions go
 
+        while time.time() - startTime > 2 or one != str(*word):
+            print("you react too late and moon lord hits you with the laser")
+            startTime = time.time()
+            one = input("You Die")
+            break
+        if one == 'd':
+            print("you dodge the laser he tries to grab you")
+            options2 = [
+        'd', 'b'
+        ]
+        word = random.choices(options2)
+        startTime = time.time()
+        two = input("You have 2 seconds to type: {}\n".format(*word))
+        #where the functions go
+
+        while time.time() - startTime > 2 or two != str(*word):
+            print("he grabs you and crushes you")
+            startTime = time.time()
+            two = input("You Die")
+        if two == 'd' or 'b':
+            print("you dodge again")
+            #time.sleep(2)
+            print("he attacks again!")
+        options3 = [
+        
+        ]
+        if "zennith" in str(inventory):
+            options3.append(str('zennith'))
+        word = random.choices(options3)
+        startTime = time.time()
+        print("you see the oppurtunity to attack")
+        three = input("You have 3 seconds to type: {}\n".format(*word))
+        #where the functions go
+
+        while time.time() - startTime > 3 or three != str(*word):
+            print("you react too late and the moon lord chokes you")
+            startTime = time.time()
+            three = input("You Die")
+        if three == "zennith":
+            print("you react fast enough, but he barely looks hurt")
+            #time.sleep(2)
+            print("the sword starts glowing")
+            #time.sleep(2)
+            print("there is a button on it")
+            #time.sleep(1)
+            print("you click it")
+            #time.sleep(1)
+            print("it makes a familiar of the moon lord")
+            #time.sleep(2)
+            print("your familiar fights and eventually killed moon lord")
+            #time.sleep(2)
+            print("a chest appears")
+            #time.sleep(2)
+            t = input("open it? (y/n)")
+            if t == "y":
+                print("you open they chest and you don't see anything just some teeth?")
+                #time.sleep(2)
+                print("IT'S A MIMIC")
+                print("it bites off your head and you die")
+                quit()
+            else:
+                print("you leave the dungeon and you get nothing")
+                endm()
     def rm4():
         print("Dungeon Master: How did you escape the eye? No one ever has before")
         #time.sleep(2)
@@ -134,6 +219,7 @@ def michael():
         else:
             print("then you must die")
             print("he shoots you with the M2 Browning Machine Gun")
+            quit()
         print("he attacks you but before he hits you a light blue beam comes out of the darkness and cuts his head off")
         #time.sleep(3)
         print("Dungeon masters disembodied head: TAKE WHAT'S IN MY POCKET")
@@ -142,10 +228,8 @@ def michael():
         print("you take what in his pocket and you feel it's energy run through you")
         #time.sleep(2)
         print("you start to hover and the ground below you crubmbles revelaing the final room")
-        rm5()
-    def rm5():
-        print("Moon Lord: welcome child to your DOOM!")
         finalfight()
+
     #end room functions
     def inv():
         print(*inventory)
@@ -183,18 +267,16 @@ def michael():
     def items():
 
         if a == 4:
-            inventory.append(str("low-power-amulet"))
+            inventory.append(str('low-power-amulet'))
             print("You Aquired a low powered amulet")
-            time.sleep(2)
         elif s == 3:
-            inventory.append(str("basic-sword"))
+            inventory.append(str('basic-sword'))
             print("You Aquired a basic sword")
-            time.sleep(2)
         else:
             print("you get nothing")
     items()
     def cont():
-        os.system("clear")
+        #os.system("clear")
         print("would you like to continue")
         print("y/n? ")
         #time.sleep(2)
@@ -215,7 +297,7 @@ def michael():
     global x
     def fight():
         if input("Fight? y/n ") == "y":
-            if "low-power-amulet" or "basic-sword" or "mace" or "lighning_staff" in str(*inventory):
+            if 'low-power-amulet' or 'basic-sword' in str(*inventory):
                 print("you attack the monster ")
                 #time.sleep(1)
                 print("you damage the monster he looks very wounded")
@@ -296,13 +378,13 @@ def michael():
     def options():
         global gold
         opt = [
-
+            'dodge'
         ]
-        if "basic-sword" in str(*inventory):
+        if 'basic-sword' in str(*inventory):
             opt.append(str('parry'))
-        if "low-power-amulet" in str(*inventory):
+        if 'low-power-amulet' in str(*inventory):
             opt.append(str('shield'))
-        word = random.choice(opt)
+        word = random.choices(opt)
         startTime = time.time()
         one = input("You have 6 seconds to type: {}\n".format(*word))
         #where the functions go
@@ -329,83 +411,7 @@ def michael():
             #time.sleep(3)
             smrm()
     options()
-    def finalfight():
-        if 'zennith' in inventory:
-            print("NO YOU WILL NOT BEAT ME WIH THAT WEAPON")
-            if 'zennith' not in inventory:
-                print("What a pitiful weapon you'll never be able to beat me")
-                print("he shoots you with his laser and you die")
-                quit()
-        options1 = [
-        'd'
-        ]
-        word = random.choices(options1)
-        startTime = time.time()
-        one = input("he shoots you with the laser  type: {}\n".format(*word))
-        #where the functions go
-
-        while time.time() - startTime > 2 or one != str(*word):
-            print("you react too late and moon lord hits you with the laser")
-            startTime = time.time()
-            one = input("You Die")
-            break
-        if one == 'd':
-            print("you dodge the laser he tries to grab you")
-            options2 = [
-        'd', 'b'
-        ]
-        word = random.choices(options2)
-        startTime = time.time()
-        two = input("You have 2 seconds to type: {}\n".format(*word))
-        #where the functions go
-
-        while time.time() - startTime > 2 or two != str(*word):
-            print("he grabs you and crushes you")
-            startTime = time.time()
-            two = input("You Die")
-        if two == 'd' or 'b':
-            print("you dodge again")
-            #time.sleep(2)
-            print("he attacks again!")
-        options3 = [
-        
-        ]
-        if "zennith" in str(inventory):
-            options3.append(str('zennith'))
-        word = random.choices(options3)
-        startTime = time.time()
-        print("you see the oppurtunity to attack")
-        three = input("You have 3 seconds to type: {}\n".format(*word))
-        #where the functions go
-
-        while time.time() - startTime > 3 or three != str(*word):
-            print("you react too late and the moon lord chokes you")
-            startTime = time.time()
-            three = input("You Die")
-        if three == "zennith":
-            print("you react fast enough, but he barely looks hurt")
-            #time.sleep(2)
-            print("the sword starts glowing")
-            #time.sleep(2)
-            print("there is a button on it")
-            #time.sleep(1)
-            print("you click it")
-            #time.sleep(1)
-            print("it makes a familiar of the moon lord")
-            #time.sleep(2)
-            print("your familiar fights and eventually killed moon lord")
-            #time.sleep(2)
-            print("a chest appears")
-            #time.sleep(2)
-            t = input("open it? (y/n)")
-            if t == "y":
-                print("you open they chest and you don't see anything just some teeth?")
-                #time.sleep(2)
-                print("IT'S A MIMIC")
-                print("it bites off your head and you die")
-                quit()
-            else:
-                print("you leave the dungeon and you get nothing")
+   
     #everything past this comment needs to stay last
     while True:
         move = input().lower().split()
