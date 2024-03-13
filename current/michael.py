@@ -1,6 +1,6 @@
 def michael():
     import random
-    #from colorama import Fore
+    from colorama import Fore
     import time
     import os
     global inventory
@@ -18,9 +18,9 @@ def michael():
         #time.sleep(4)
         usr2 = int(input("Would you like to open the chest (1) or continue without opening the chest (2)? "))
         if usr2 == 1:
-            print("You have accuired a Strong Sword.")
+            print(f"{Fore.GREEN}You have accuired a Strong Sword. {Fore.WHITE}")
             inventory.append(str('strong_sword'))
-            print("You have accuired 10 gold.")
+            print(f"{Fore.YELLOW}You have accuired 10 gold. {Fore.WHITE}")
             gold += 10
         else:
             print("You have entered the room without opening the chest.")
@@ -60,14 +60,14 @@ def michael():
         print("you notice a chest that wasn't there before")
         usr2 = int(input("Would you like to open the chest (1) or continue without opening the chest (2)? "))
         if usr2 == 1:
-            print("You have accuired a Staff with a lighting emblem on it.")
+            print(f"{Fore.GREEN}You have accuired a Staff with a lighting emblem on it. {Fore.WHITE}")
             inventory.append(str('lightning_staff'))
-            print("You have accuired 10 gold. ")
+            print(f"{Fore.YELLOW}You have accuired 10 gold. {Fore.YELLOW}")
             gold += 10
         print("you see 2 more doors one is marked with:")
-        print("WARNING DO NOT ENTER")
+        print(f"{Fore.RED}WARNING DO NOT ENTER{Fore.WHITE}")
         print("and you see one with a sign that says:")
-        print("this room has candy")
+        print(f"{Fore.GREEN}this room has candy{Fore.WHITE}")
         input("Which room Candy?(1) or Warning (2)")
         #time.sleep(2)
         rm2()
@@ -160,7 +160,7 @@ def michael():
         w = input("y/n? ")
         if w == "y":
             print("Ok then lets continue")
-            print("You lose 500G")
+            print(f"{Fore.RED}You lose 500G{Fore.WHITE}")
             gold -= 500
         else:
             print("THEN DIE")
@@ -295,11 +295,13 @@ def michael():
             rm4()
     def options():
         global gold
-        opt = []
+        opt = [
+
+        ]
         if "basic-sword" in str(*inventory):
-            opt.append(str("parry"))
+            opt.append(str('parry'))
         if "low-power-amulet" in str(*inventory):
-            opt.append(str("shield"))
+            opt.append(str('shield'))
         word = random.choice(opt)
         startTime = time.time()
         one = input("You have 6 seconds to type: {}\n".format(*word))
