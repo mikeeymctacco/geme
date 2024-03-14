@@ -15,7 +15,7 @@ def michael():
     def endm():
         print("you return to the town")
         print("GM: Good job you have won")
-        print("GM: by the whay the moon lord was protekting the town so kill ")
+        print("GM: by the whay the moon lord was protekting the town so kill yoresellf")
     #end steven code
     #room functions
     def smrm():
