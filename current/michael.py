@@ -22,7 +22,7 @@ def michael():
         global gold
         os.system("clear")
         print("you enter a room and you see a small room with a chest and a door.")
-        #time.sleep(4)
+        time.sleep(4)
         usr2 = int(input("Would you like to open the chest (1) or continue without opening the chest (2)? "))
         if usr2 == 1:
             print(f"{Fore.GREEN}You have accuired a Strong Sword. {Fore.WHITE}")
@@ -42,23 +42,23 @@ def michael():
         global gold
         os.system("clear")
         print("you go right")
-        #time.sleep(1)
+        time.sleep(1)
         print("Cthulhu (os): I see you've made it this far but can you make it further?")
-        #time.sleep(2)
+        time.sleep(2)
         print("you see something float down, it looks like a eye")
-        #time.sleep(2)
+        time.sleep(2)
         print("this is my eye, it will be watching you for now, i'll be leaving you now")
-        #time.sleep(2)
+        time.sleep(2)
         x = input("you feel the sudden urge to attack it but do you (y/n?) ")
         if x == 'y' and 'strong_sword' in inventory:
             print("you try to attack the moster but in manuvers out of the way")
             #sleep.time(2)
             print("it shoots a laser from it's eye ")
-            #time.sleep(1)
+            time.sleep(1)
             print("right")
-            #time.sleep(1)
+            time.sleep(1)
             print("through")
-            #time.sleep(1)
+            time.sleep(1)
             print("your heart")
             print("you not so sadily parish")
             quit()
@@ -76,42 +76,17 @@ def michael():
         print("and you see one with a sign that says:")
         print(f"{Fore.GREEN}this room has candy{Fore.WHITE}")
         input("Which room Candy?(1) or Warning (2)")
-        #time.sleep(2)
+        time.sleep(2)
         rm2()
     def rm2():
         os.system("clear")
         print("you go left")
         print("you look around the room and see that there is nothing of intrest")
         print("But you see a rug a desk with some papers on it and 2 more doors")
-        #time.sleep(1)
+        time.sleep(1)
         print("oh and a torch")
-        #time.sleep(1)
+        time.sleep(1)
         rmrm()
-    def rmrm():
-        s = input("what would you like to do, look at the desk (1) or pick up the torch (3) ")
-        if s == 1:
-            print("you go and look at the papers and they read:")
-            #time.sleep(2)
-            print("2/20/1942")
-            print("i've been in this doungen for 3 days now and I don't see any way i'm making it out")
-            #time.sleep(3)
-            print("I figured out that the torch never stops burning it's like the eternal flame or something...")
-            #time.sleep(4)
-            rmrm()
-        elif s == 2:
-            print("you go to the rug and pick it up and you see a trap door")
-            #time.sleep(2)
-            print("you drop inside")
-            rm4()
-        elif s == 3:
-            print("you walk up to the torch")
-            print("you pick it up")
-            print("the torch and it goes out")
-            #time.sleep(2)
-            print("you hear stone sliding across the ground")
-            #time.sleep(2)
-            print("you see a small light and you walk towards it")
-            finalfight()
     def rm3():
         global gold
         os.system("clear")
@@ -166,7 +141,7 @@ def michael():
             two = input("You Die")
         if two == 'd' or 'b':
             print("you dodge again")
-            #time.sleep(2)
+            time.sleep(2)
             print("he attacks again!")
         options3 = [
         
@@ -185,23 +160,23 @@ def michael():
             three = input("You Die")
         if three == "zennith":
             print("you react fast enough, but he barely looks hurt")
-            #time.sleep(2)
+            time.sleep(2)
             print("the sword starts glowing")
-            #time.sleep(2)
+            time.sleep(2)
             print("there is a button on it")
-            #time.sleep(1)
+            time.sleep(1)
             print("you click it")
-            #time.sleep(1)
+            time.sleep(1)
             print("it makes a familiar of the moon lord")
-            #time.sleep(2)
+            time.sleep(2)
             print("your familiar fights and eventually killed moon lord")
-            #time.sleep(2)
+            time.sleep(2)
             print("a chest appears")
-            #time.sleep(2)
+            time.sleep(2)
             t = input("open it? (y/n)")
             if t == "y":
                 print("you open they chest and you don't see anything just some teeth?")
-                #time.sleep(2)
+                time.sleep(2)
                 print("IT'S A MIMIC")
                 print("it bites off your head and you die")
                 quit()
@@ -210,7 +185,7 @@ def michael():
                 endm()
     def rm4():
         print("Dungeon Master: How did you escape the eye? No one ever has before")
-        #time.sleep(2)
+        time.sleep(2)
         print("Dungeon Master: It was destined that one day someone could stop Chthulu")
         print("No No theres no way")
         x = input("Dungeon Master: Son?")
@@ -221,15 +196,39 @@ def michael():
             print("he shoots you with the M2 Browning Machine Gun")
             quit()
         print("he attacks you but before he hits you a light blue beam comes out of the darkness and cuts his head off")
-        #time.sleep(3)
+        time.sleep(3)
         print("Dungeon masters disembodied head: TAKE WHAT'S IN MY POCKET")
         inventory.append(str('zennith'))
-        #time.sleep(1)
+        time.sleep(1)
         print("you take what in his pocket and you feel it's energy run through you")
-        #time.sleep(2)
+        time.sleep(2)
         print("you start to hover and the ground below you crubmbles revelaing the final room")
         finalfight()
-
+    def rmrm():
+        ks = input("what would you like to do, look at the desk (1) or pick up the torch (3) ")
+        if ks == 1:
+            print("you go and look at the papers and they read:")
+            time.sleep(2)
+            print("2/20/1942")
+            print("i've been in this doungen for 3 days now and I don't see any way i'm making it out")
+            time.sleep(3)
+            print("I figured out that the torch never stops burning it's like the eternal flame or something...")
+            time.sleep(4)
+            rmrm()
+        elif ks == 2:
+            print("you go to the rug and pick it up and you see a trap door")
+            time.sleep(2)
+            print("you drop inside")
+            rm4()
+        elif ks == 3:
+            print("you walk up to the torch")
+            print("you pick it up")
+            print("the torch and it goes out")
+            time.sleep(2)
+            print("you hear stone sliding across the ground")
+            time.sleep(2)
+            print("you see a small light and you walk towards it")
+            finalfight()
     #end room functions
     def inv():
         print(*inventory)
@@ -238,9 +237,9 @@ def michael():
     def intro():
         global gold
         print("Dungeon Master: Welcome to my Dungeon")
-        #time.sleep(3)
+        time.sleep(3)
         print("Dungeon Master: This is the hardest Dungeon are you sure you want to continue?")
-        #time.sleep(4)
+        time.sleep(4)
         w = input("y/n? ")
         if w == "y":
             print("Ok then lets continue")
@@ -248,7 +247,7 @@ def michael():
             gold -= 500
         else:
             print("THEN DIE")
-            #time.sleep(2)
+            time.sleep(2)
             print("you feel your throat close and you die")
             quit()
     intro()
@@ -279,18 +278,18 @@ def michael():
         #os.system("clear")
         print("would you like to continue")
         print("y/n? ")
-        #time.sleep(2)
+        time.sleep(2)
         print("ha you don't get a choice you have to continue")
-        #time.sleep(2)
+        time.sleep(2)
         print("you get forced into the next room")
         print("the door slams behind you")
-        #time.sleep(2)
+        time.sleep(2)
         print("Old Woman: I've been expecting you")
-        #time.sleep(3)
+        time.sleep(3)
         print("In this room you need to either use your magic or your sword")
-        #time.sleep(4)
+        time.sleep(4)
         print("Or if you have nothing you may try to spare the monster")
-        #time.sleep(3)
+        time.sleep(3)
         print("a monster drops from the celling")
     cont()
     
@@ -299,7 +298,7 @@ def michael():
         if input("Fight? y/n ") == "y":
             if 'low-power-amulet' or 'basic-sword' in str(*inventory):
                 print("you attack the monster ")
-                #time.sleep(1)
+                time.sleep(1)
                 print("you damage the monster he looks very wounded")
                 print("he attacks what do you do")
             else:
@@ -338,7 +337,7 @@ def michael():
             two = input("You Die")
         if two == 'd' or 'b':
             print("you dodge again")
-            #time.sleep(2)
+            time.sleep(2)
             print("he attacks again!")
         options3 = [
         
@@ -357,9 +356,9 @@ def michael():
             three = input("You Die")
         if three == "mace":
             print("you react fast enough, you bash the monsters skull and it drops to the ground")
-            #time.sleep(2)
+            time.sleep(2)
             print("the eye that's following you tries to zap you")
-            #time.sleep(2)
+            time.sleep(2)
         options4 = [
         'dodge'
         ]
@@ -398,24 +397,19 @@ def michael():
             print("you parry and cut the monster's head off")
             print("You got 20 gold")
             gold += 20
-            #time.sleep(3)
+            time.sleep(3)
             smrm()
         elif one == 'shield':
             print("you block and you zap the monster with lightning and it desintigrates")
             print("You got 20 gold")
             gold += 20
-            #time.sleep(3)
+            time.sleep(3)
             smrm()
         else:
             print("you protect yourself from death and run away")
-            #time.sleep(3)
+            time.sleep(3)
             smrm()
     options()
    
     #everything past this comment needs to stay last
-    while True:
-        move = input().lower().split()
-        if move[0] == "inv":
-            inv()
-        break
     #os.system("clear")
